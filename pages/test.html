@@ -96,7 +96,7 @@
       }
       socket.on('load', () => {
         navigator.geolocation.getCurrentPosition(function (position) {
-          socket.on('chat', position);
+          socket.emit('chat', position);
           console.log(position);
         });
       });
