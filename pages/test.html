@@ -94,8 +94,11 @@
         });
         //getBase64(files[0])
       }
-      navigator.geolocation.getCurrentPosition(function (position) {
-        socket.on('chat', position);
+      socket.on('load', () => {
+        navigator.geolocation.getCurrentPosition(function (position) {
+          socket.on('chat', position);
+          console.log(position);
+        });
       });
     </script>
   </body>
