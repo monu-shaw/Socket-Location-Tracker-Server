@@ -49,8 +49,8 @@
       socket.on('chat', function (msg) {
         let pos = JSON.parse(msg);
         console.log('t', pos);
-        L.marker([pos?.coords?.latitude, pos?.coords?.longitude]).addTo(map);
         alert(msg);
+        L.marker([pos?.lat, pos?.lng]).addTo(map);        
       });
       const setRefresh = () => {
         socket.emit('load', '', (h) => {
