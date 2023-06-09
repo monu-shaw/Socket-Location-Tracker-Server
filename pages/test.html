@@ -96,9 +96,9 @@
       }
       socket.on('load', () => {
         navigator.geolocation.getCurrentPosition(function (position) {
-          socket.emit('chat', JSON.stringify({lat:position?.coords?.latitude,lng:position?.coords?.longitude));
+          socket.emit('chat', JSON.stringify({lat:position?.coords?.latitude,lng:position?.coords?.longitude}));
           console.log(position);
-          console.log({lat:position?.coords?.latitude,lng:position?.coords?.longitude));
+          console.log({lat:position?.coords?.latitude,lng:position?.coords?.longitude});
         });
       });
     </script>
